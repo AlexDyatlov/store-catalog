@@ -10,7 +10,11 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  color: var(--color-main);
   background-color: var(--color-white);
 }
 
@@ -50,8 +54,40 @@ button {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
+  padding: 0 20px;
+  max-width: 1210px;
+}
+
+.btn {
+  position: relative;
+  padding: 20.5px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: var(--color-cinnabar);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-115px, -50%);
+    width: 14px;
+    height: 15px;
+    background-image: url("../img/btn.svg");
+    transition: background-image 0.3s ease-in-out;
+  }
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-bali-hai);
+
+    &::before {
+      background-image: url("../img/btn-white.svg");
+    }
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
