@@ -68,6 +68,11 @@ button {
   border: 1px solid var(--color-gray);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 
+  @include mobile {
+    padding: 16px;
+    font-size: 12px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -78,6 +83,11 @@ button {
     height: 15px;
     background-image: url("../img/btn.svg");
     transition: background-image 0.3s ease-in-out;
+
+    @include mobile {
+      top: 48%;
+      transform: translate(-95px, -50%);
+    }
   }
 
   &:focus {
