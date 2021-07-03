@@ -80,6 +80,10 @@ button {
     transition: background-image 0.3s ease-in-out;
   }
 
+  &:focus {
+    border: 1px solid var(--color-shaft);
+  }
+
   &:hover {
     color: var(--color-white);
     background-color: var(--color-bali-hai);
